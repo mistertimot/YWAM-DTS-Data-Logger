@@ -1,0 +1,20 @@
+<%- include("partials/header") %>
+<div class="container">
+  <nav aria-label="breadcrumb">
+	 <ol class="breadcrumb">
+		<li class="breadcrumb-item"><a  href="/">Homepage</a></li>
+		<li class="breadcrumb-item active">My Opportunities</li>
+	  </ol>
+  </nav>
+	<h1>My DTS Opportunities</h1>
+	<a href="/opportunities/new" class="btn btn-lg btn-success">Add New Opportunity</a>
+	<% schools.forEach(function(school){ %>
+		<div>
+			<strong><h1><a href="/opportunities/<%=school._id%>"><%=school.location%></a></h1></strong>
+			<a href="<%=school.website%>" target="_blank"><%=school.website%></a>
+		</div>
+	<% }) %>
+</div>
+
+
+<%- include("partials/footer") %>

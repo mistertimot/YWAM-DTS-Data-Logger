@@ -1,0 +1,46 @@
+<%- include("partials/header") %>
+<div class="container">
+	<nav aria-label="breadcrumb">
+	 <ol class="breadcrumb">
+		<li class="breadcrumb-item"><a href="/">Homepage</a></li>
+		<li class="breadcrumb-item"><a href="/opportunities">My Opportunities</a></li>
+		<li class="breadcrumb-item" active>View <%=school.location%> Details</li>
+	  </ol>
+  </nav>
+	<h1 style="text-align: center;"><%=school.location%> DTS</h1>
+	
+	<dl class="row">
+	  <dt class="col-sm-3">Outreach Locations</dt>
+	  <dd class="col-sm-9"><%=school.outreachLocations%></dd>
+
+  		<dt class="col-sm-3">Estimated Total Tuition Cost</dt>
+ 		<dd class="col-sm-9">
+  		<p>$~<%=school.cost%></p>
+ 	  </dd>
+
+  	  <dt class="col-sm-3">Start Date(s)</dt>
+  	  <dd class="col-sm-9"><%=school.startDate%></dd>
+
+ 	   <dt class="col-sm-3 text-truncate">Website</dt>
+ 	   <dd class="col-sm-9"><a href="<%=school.website%>" target="_blank"><%=school.website%></a></dd>
+
+   	   <dt class="col-sm-3">Facebook Page</dt>
+ 	   <dd class="col-sm-9"><a href="<%=school.FBPage%>" target="_blank"><%=school.FBPage%></a></dd>
+		
+	   <dt class="col-sm-3">Youtube Channel</dt>
+ 	   <dd class="col-sm-9"><a href="<%=school.youtubeChannel%>" target="_blank"><%=school.youtubeChannel%></a></dd>
+	   
+	   <dt class="col-sm-2">Thoughts and Notes</dt>
+ 	   <dd class="col-sm-9"><%=school.additionalNotes%></dd>
+	</dl>
+	<a class="btn btn-md btn-warning" href="/opportunities/<%=school._id%>/edit">Edit</a>
+	<form action="/opportunities/<%=school._id%>?_method=DELETE" method="POST">
+		<button class="btn btn-md btn-danger">Delete</button>
+	</form>
+	<p>
+		<a href="/opportunities">Go back</a>
+	</p>
+</div>
+		
+		
+<%- include("partials/footer") %>
