@@ -8,6 +8,7 @@ This is an app that helps the user view information that was inputted about YWAM
 </ul>
 
 <h1>Functionality Yet to Add</h1>
+<p>This web app is still a work in progress and there are things that I have yet to add to it:</p>
 <ul>
   <li>Users: Ability to have multiple users and their saved schools.</li>
   <li>Better Error Handling</li>
